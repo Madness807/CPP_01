@@ -3,36 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
+/*   By: joterret <joterret@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 13:08:00 by joterrett         #+#    #+#             */
-/*   Updated: 2024/01/18 13:35:39 by joterrett        ###   ########.fr       */
+/*   Updated: 2024/01/23 16:01:41 by joterret         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef [NOM_CLASSE]_HPP
-#define [NOM_CLASSE]_HPP
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
-// Inclure d'autres bibliothèques nécessaires
 
-class [NomClasse] {
-    public:
-        // Constructeurs
-        [NomClasse]();
-        [NomClasse](const [NomClasse] &source);
+class Zombie {
+	public:
+		// Constructeurs && Destructeur
+		Zombie();
+		Zombie(const std::string &name);
+		~Zombie();
 
-        // Destructeur
-        ~[NomClasse]();
+		//Methodes
+		void announce() const;
 
-        // Opérateur d'affectation
-        [NomClasse] &operator=(const [NomClasse] &source);
+	private:
+		//Attributs
+		std::string name;
 
-        // Autres méthodes publiques
-
-    private:
-        // Attributs privés
 };
 
-#endif /* ![NOM_CLASSE]_HPP */
+//Autres fonctions
+void randomChump(std::string name);
+Zombie* newZombie(std::string name);
+
+#endif
