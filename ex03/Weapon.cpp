@@ -1,12 +1,14 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:08:54 by joterrett         #+#    #+#             */
-/*   Updated: 2024/01/18 13:08:56 by joterrett        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+# include "Weapon.hpp"
 
+//Methode
+std::string Weapon::getType() const{
+	return type;
+}
+
+void Weapon::setType(const std::string &newType){
+	type = newType;
+}
+
+// Constructeur / Destructeur
+Weapon::Weapon(std::string type) : type(type) {}
+Weapon::~Weapon(){}

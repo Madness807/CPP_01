@@ -1,12 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:08:40 by joterrett         #+#    #+#             */
-/*   Updated: 2024/01/18 13:08:41 by joterrett        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+# include "HumanA.hpp"
 
+void HumanA::attack()
+{
+	std::cout << name << " attacks with his " << weapon.getType() << std::endl;
+}
+
+// constructeur, destructeur
+HumanA::HumanA(std::string name, Weapon &weapon) : name(name), weapon(weapon){}
+HumanA::~HumanA(){}

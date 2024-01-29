@@ -1,12 +1,20 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:08:57 by joterrett         #+#    #+#             */
-/*   Updated: 2024/01/18 13:08:58 by joterrett        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
+#include <iostream>
+#include <string>
+
+class Weapon
+{
+	public:
+		Weapon(std::string type);
+		~Weapon();
+
+		std::string getType() const;
+		void setType(const std::string &newType);
+
+	private:
+		std::string type;
+};
+
+#endif

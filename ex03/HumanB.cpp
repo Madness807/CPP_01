@@ -1,12 +1,15 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:08:44 by joterrett         #+#    #+#             */
-/*   Updated: 2024/01/18 13:08:46 by joterrett        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+# include "HumanB.hpp"
 
+void HumanB::attack()
+{
+	std::cout << name << " attacks with his " << weapon->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon &newWeapon)
+{
+	weapon = &newWeapon;
+}
+
+// constructeur, destructeur
+HumanB::HumanB(std::string name) : name(name){}
+HumanB::~HumanB(){}
