@@ -4,21 +4,27 @@
 //Public
 void Harl::complain(std::string level)
 {
-	if (level == "DEBUG"){
-		
-	}
-	else if (level == "INFO"){
+	tab_options[0] = "DEBUG";
+	tab_options[1] = "INFO";
+	tab_options[2] = "WARNING";
+	tab_options[3] = "ERROR";
+
+	tab_ptr_func[0] = &Harl::debug;
+	tab_ptr_func[1] = &Harl::info; 
+	tab_ptr_func[2] = &Harl::warning; 
+	tab_ptr_func[3] = &Harl::error; 
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == tab_options[i])
+		{
+			(this->*tab_ptr_func[i])();
+			break;
+		}
 
 	}
-	else if (level == "WARNING"){
-
-	}
-	else if (level == "ERROR"){
-		
-	}
-	else
-		std::cout << "This arg dont work here" << std::endl;
 }
+
 //Prive
 void Harl::debug(void){
 	std::cout << "Ceci est un message de DEBUG" << std::endl;
