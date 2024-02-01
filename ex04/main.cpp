@@ -1,12 +1,18 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: joterrett <joterrett@student.42.fr>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/18 13:09:09 by joterrett         #+#    #+#             */
-/*   Updated: 2024/01/18 13:09:10 by joterrett        ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <iostream>
+#include <string>
+#include <fstream>
+#include "sed.hpp"
 
+int main(int argc, char **argv)
+{
+	if (argc <= 1 || argc > 4)
+	{
+		std::cout << "Bad Number of input args" << std::endl;
+		return(1);
+	}
+
+	Sed sed_instance;
+	sed_instance.replace(argv[1], argv[2], argv[3]);
+	
+	return (0);
+}
